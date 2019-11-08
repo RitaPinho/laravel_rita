@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Rita Pinho - 85182
                 </div>
 
                 <div class="links">

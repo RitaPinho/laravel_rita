@@ -1,0 +1,1958 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_6500c6b37eb0891b4e5a47893a5a3376 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/player" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "created_at": "2019-11-05 15:36:28",
+            "updated_at": "2019-11-05 15:36:28",
+            "name": "Pizzi",
+            "birth_date": "1989-10-06",
+            "photo": null,
+            "team_id": 1,
+            "country_id": 33,
+            "position_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "created_at": "2019-11-05 15:36:28",
+            "updated_at": "2019-11-05 15:36:28",
+            "name": "Pedrinho",
+            "birth_date": "1992-12-20",
+            "photo": null,
+            "team_id": 2,
+            "country_id": 33,
+            "position_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "created_at": "2019-11-05 15:36:28",
+            "updated_at": "2019-11-05 15:36:28",
+            "name": "Carlitos",
+            "birth_date": "1985-07-23",
+            "photo": null,
+            "team_id": 3,
+            "country_id": 33,
+            "position_id": 4,
+            "deleted_at": null
+        },
+        {
+            "id": 5,
+            "created_at": "2019-11-05 17:45:01",
+            "updated_at": "2019-11-05 18:49:01",
+            "name": "Odysseas Vlachodimos",
+            "birth_date": "1994-04-26",
+            "photo": null,
+            "team_id": 1,
+            "country_id": 19,
+            "position_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "created_at": "2019-11-06 11:49:34",
+            "updated_at": "2019-11-06 11:49:34",
+            "name": "Manuel Lopes",
+            "birth_date": "1950-12-01",
+            "photo": null,
+            "team_id": 8,
+            "country_id": 34,
+            "position_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 7,
+            "created_at": "2019-11-06 17:31:41",
+            "updated_at": "2019-11-06 17:31:41",
+            "name": "Rui",
+            "birth_date": "2019-01-01",
+            "photo": "images\/9F6i3VdjW5ApJn9fFG9MIaQv6jRfv7toYYldCzPF.jpeg",
+            "team_id": 6,
+            "country_id": 34,
+            "position_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 8,
+            "created_at": "2019-11-08 01:37:47",
+            "updated_at": "2019-11-08 01:37:47",
+            "name": "Pedro Pinho",
+            "birth_date": "2005-09-05",
+            "photo": "images\/HxMGLV1gsPK48QccWxOe5k1kdF4UEe5dTRnHNnT1.png",
+            "team_id": 2,
+            "country_id": 13,
+            "position_id": 1,
+            "deleted_at": null
+        }
+    ],
+    "message": "Lista de dirigentes",
+    "result": "ok"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/player</code></p>
+<!-- END_6500c6b37eb0891b4e5a47893a5a3376 -->
+<!-- START_4fe83bd5228422c53c374775227f09e4 -->
+<h2>Show the form for creating a new resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/player/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/player/create</code></p>
+<!-- END_4fe83bd5228422c53c374775227f09e4 -->
+<!-- START_fc2d18e575cc136769d5b3d23b327494 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/player" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"deserunt","birth_date":"quas","photo":"qui","team_id":10,"country_id":19,"position_id":6}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "deserunt",
+    "birth_date": "quas",
+    "photo": "qui",
+    "team_id": 10,
+    "country_id": 19,
+    "position_id": 6
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/player</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Jogador</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+<tr>
+<td><code>position_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da posição</td>
+</tr>
+</tbody>
+</table>
+<!-- END_fc2d18e575cc136769d5b3d23b327494 -->
+<!-- START_60c2c23f0dd6f25e748f31acb60aca90 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/player/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "created_at": "2019-11-05 15:36:28",
+    "updated_at": "2019-11-05 15:36:28",
+    "name": "Pizzi",
+    "birth_date": "1989-10-06",
+    "photo": null,
+    "team_id": 1,
+    "country_id": 33,
+    "position_id": 3,
+    "deleted_at": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/player/{player}</code></p>
+<!-- END_60c2c23f0dd6f25e748f31acb60aca90 -->
+<!-- START_b143677de6a204fec3298b749c8b9a7a -->
+<h2>Show the form for editing the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/player/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/player/{player}/edit</code></p>
+<!-- END_b143677de6a204fec3298b749c8b9a7a -->
+<!-- START_c269e0a1680652d42dc98c5e08adba6f -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/player/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"rerum","birth_date":"vel","photo":"eligendi","team_id":10,"country_id":17,"position_id":6}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "rerum",
+    "birth_date": "vel",
+    "photo": "eligendi",
+    "team_id": 10,
+    "country_id": 17,
+    "position_id": 6
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/player/{player}</code></p>
+<p><code>PATCH api/player/{player}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Jogador</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+<tr>
+<td><code>position_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da posição</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c269e0a1680652d42dc98c5e08adba6f -->
+<!-- START_8aea17de8b628e69dcd572e59dc64092 -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/player/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/player/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/player/{player}</code></p>
+<!-- END_8aea17de8b628e69dcd572e59dc64092 -->
+<!-- START_5501869f408e322bf92ae7a08b073989 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/coach" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "created_at": "2019-11-05 15:43:19",
+            "updated_at": "2019-11-05 15:43:19",
+            "name": "José Gomes",
+            "birth_date": "1958-09-12",
+            "photo": null,
+            "team_id": 4,
+            "country_id": 15,
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "created_at": "2019-11-05 15:43:19",
+            "updated_at": "2019-11-05 15:43:19",
+            "name": "Mário Rui",
+            "birth_date": "1978-09-12",
+            "photo": null,
+            "team_id": 3,
+            "country_id": 4,
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "created_at": "2019-11-05 15:43:19",
+            "updated_at": "2019-11-05 15:43:19",
+            "name": "Pepa",
+            "birth_date": "1980-12-14",
+            "photo": null,
+            "team_id": 2,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 4,
+            "created_at": "2019-11-05 15:43:19",
+            "updated_at": "2019-11-05 15:43:19",
+            "name": "Bruno Lage",
+            "birth_date": "1976-05-12",
+            "photo": null,
+            "team_id": 1,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "created_at": "2019-11-05 18:21:31",
+            "updated_at": "2019-11-06 11:09:12",
+            "name": "Luís",
+            "birth_date": "1996-09-12",
+            "photo": null,
+            "team_id": 7,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 7,
+            "created_at": "2019-11-06 11:34:07",
+            "updated_at": "2019-11-06 11:34:07",
+            "name": "Manuel Lopes",
+            "birth_date": "1950-12-01",
+            "photo": null,
+            "team_id": 8,
+            "country_id": 34,
+            "deleted_at": null
+        },
+        {
+            "id": 8,
+            "created_at": "2019-11-06 17:32:30",
+            "updated_at": "2019-11-06 17:32:30",
+            "name": "Rui",
+            "birth_date": "2019-01-01",
+            "photo": "images\/gb0QLQEgRxspBl13caiH48M66SjpC1nkr65wQQRn.jpeg",
+            "team_id": 6,
+            "country_id": 34,
+            "deleted_at": null
+        },
+        {
+            "id": 9,
+            "created_at": "2019-11-08 01:50:26",
+            "updated_at": "2019-11-08 01:50:26",
+            "name": "Rui Rui",
+            "birth_date": "1998-12-21",
+            "photo": "images\/5fFVih0m5a2GqYUfYE7JK7NJ1YcI8EcCPRKhwOD5.png",
+            "team_id": 10,
+            "country_id": 33,
+            "deleted_at": null
+        }
+    ],
+    "message": "Lista de treinadores",
+    "result": "ok"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/coach</code></p>
+<!-- END_5501869f408e322bf92ae7a08b073989 -->
+<!-- START_7bdd7ef05d04715a955dda458df539ff -->
+<h2>Show the form for creating a new resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/coach/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/coach/create</code></p>
+<!-- END_7bdd7ef05d04715a955dda458df539ff -->
+<!-- START_84e064edfed22fba046691a31a6423c5 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/coach" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"sequi","birth_date":"ipsam","photo":"labore","team_id":10,"country_id":2}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "sequi",
+    "birth_date": "ipsam",
+    "photo": "labore",
+    "team_id": 10,
+    "country_id": 2
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/coach</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Treinador</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+</tbody>
+</table>
+<!-- END_84e064edfed22fba046691a31a6423c5 -->
+<!-- START_e3aa175cbbe858da9d6387fbab59b95a -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/coach/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "created_at": "2019-11-05 15:43:19",
+    "updated_at": "2019-11-05 15:43:19",
+    "name": "José Gomes",
+    "birth_date": "1958-09-12",
+    "photo": null,
+    "team_id": 4,
+    "country_id": 15,
+    "deleted_at": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/coach/{coach}</code></p>
+<!-- END_e3aa175cbbe858da9d6387fbab59b95a -->
+<!-- START_922f18060f2513788c146d71ead6275a -->
+<h2>Show the form for editing the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/coach/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/coach/{coach}/edit</code></p>
+<!-- END_922f18060f2513788c146d71ead6275a -->
+<!-- START_039926da52f361cc86dbc2568bad1cec -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/coach/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"voluptatem","birth_date":"ipsum","photo":"dolore","team_id":8,"country_id":5}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "voluptatem",
+    "birth_date": "ipsum",
+    "photo": "dolore",
+    "team_id": 8,
+    "country_id": 5
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/coach/{coach}</code></p>
+<p><code>PATCH api/coach/{coach}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Treinador</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+</tbody>
+</table>
+<!-- END_039926da52f361cc86dbc2568bad1cec -->
+<!-- START_225b95f4bf8c5659500a305a6661b190 -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/coach/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/coach/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/coach/{coach}</code></p>
+<!-- END_225b95f4bf8c5659500a305a6661b190 -->
+<!-- START_ffcdd7797c0d9068c79e04a1b180ffe8 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/leader" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "created_at": "2019-11-05 15:45:38",
+            "updated_at": "2019-11-05 15:45:38",
+            "name": "João Afonso",
+            "birth_date": "1987-09-12",
+            "photo": null,
+            "team_id": 4,
+            "country_id": 15,
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "created_at": "2019-11-05 15:45:39",
+            "updated_at": "2019-11-05 15:45:39",
+            "name": "Rui Jorge",
+            "birth_date": "1981-09-12",
+            "photo": null,
+            "team_id": 3,
+            "country_id": 4,
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "created_at": "2019-11-05 15:45:39",
+            "updated_at": "2019-11-05 15:45:39",
+            "name": "Pedro Pinho",
+            "birth_date": "1999-09-14",
+            "photo": null,
+            "team_id": 2,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 4,
+            "created_at": "2019-11-05 15:45:39",
+            "updated_at": "2019-11-05 15:45:39",
+            "name": "Fábio Costa",
+            "birth_date": "1962-01-02",
+            "photo": null,
+            "team_id": 1,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 5,
+            "created_at": "2019-11-05 17:42:02",
+            "updated_at": "2019-11-05 17:42:02",
+            "name": "Luís Alves",
+            "birth_date": "1996-09-18",
+            "photo": null,
+            "team_id": 7,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "created_at": "2019-11-05 18:23:52",
+            "updated_at": "2019-11-05 18:23:52",
+            "name": "Luís Alves",
+            "birth_date": "1996-09-12",
+            "photo": null,
+            "team_id": 7,
+            "country_id": 33,
+            "deleted_at": null
+        },
+        {
+            "id": 7,
+            "created_at": "2019-11-06 11:48:57",
+            "updated_at": "2019-11-06 11:48:57",
+            "name": "Manuel Lopes",
+            "birth_date": "1950-12-01",
+            "photo": null,
+            "team_id": 8,
+            "country_id": 34,
+            "deleted_at": null
+        },
+        {
+            "id": 8,
+            "created_at": "2019-11-06 17:32:42",
+            "updated_at": "2019-11-06 17:32:42",
+            "name": "Rui",
+            "birth_date": "2019-01-01",
+            "photo": "images\/76Wv0xghCthvCdiuyRRnyBvVEoe5vHiUzHBUYKoT.jpeg",
+            "team_id": 6,
+            "country_id": 34,
+            "deleted_at": null
+        },
+        {
+            "id": 9,
+            "created_at": "2019-11-08 02:01:44",
+            "updated_at": "2019-11-08 02:01:44",
+            "name": "Manuel Marques",
+            "birth_date": "1967-11-12",
+            "photo": "images\/yKR89Qs2mKjReACIwyKhBLKgRAjGIGVBvu6VDiav.png",
+            "team_id": 10,
+            "country_id": 33,
+            "deleted_at": null
+        }
+    ],
+    "message": "Lista de dirigentes",
+    "result": "ok"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/leader</code></p>
+<!-- END_ffcdd7797c0d9068c79e04a1b180ffe8 -->
+<!-- START_2d2ab1baa5368bf54d84c08850751367 -->
+<h2>Show the form for creating a new resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/leader/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/leader/create</code></p>
+<!-- END_2d2ab1baa5368bf54d84c08850751367 -->
+<!-- START_443696041d705650fbcdae66837a1a9e -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/leader" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"aliquam","birth_date":"repudiandae","photo":"laudantium","team_id":4,"country_id":11}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "aliquam",
+    "birth_date": "repudiandae",
+    "photo": "laudantium",
+    "team_id": 4,
+    "country_id": 11
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/leader</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Dirigente</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+</tbody>
+</table>
+<!-- END_443696041d705650fbcdae66837a1a9e -->
+<!-- START_8bdcedf9acf0d67635481217b31f6950 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/leader/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"repellendus","birth_date":"fugit","photo":"quasi","team_id":3,"country_id":5}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "repellendus",
+    "birth_date": "fugit",
+    "photo": "quasi",
+    "team_id": 3,
+    "country_id": 5
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "created_at": "2019-11-05 15:45:38",
+    "updated_at": "2019-11-05 15:45:38",
+    "name": "João Afonso",
+    "birth_date": "1987-09-12",
+    "photo": null,
+    "team_id": 4,
+    "country_id": 15,
+    "deleted_at": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/leader/{leader}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome do Dirigente</td>
+</tr>
+<tr>
+<td><code>birth_date</code></td>
+<td>date</td>
+<td>required</td>
+<td>Data de nascimento</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Fotografia</td>
+</tr>
+<tr>
+<td><code>team_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da equipa</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+</tbody>
+</table>
+<!-- END_8bdcedf9acf0d67635481217b31f6950 -->
+<!-- START_47a6863d0f242efd8f0bec12b4fd029a -->
+<h2>Show the form for editing the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/leader/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/leader/{leader}/edit</code></p>
+<!-- END_47a6863d0f242efd8f0bec12b4fd029a -->
+<!-- START_0a9abe70c31fa47925326ff4253e2156 -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/leader/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/leader/{leader}</code></p>
+<p><code>PATCH api/leader/{leader}</code></p>
+<!-- END_0a9abe70c31fa47925326ff4253e2156 -->
+<!-- START_0cda8b51e83cf4ebb9ba0c5f57bdb5ad -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/leader/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/leader/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/leader/{leader}</code></p>
+<!-- END_0cda8b51e83cf4ebb9ba0c5f57bdb5ad -->
+<!-- START_702da605377efe10b66841e103c2080c -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/team" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "SL Benfica",
+            "year": 1904,
+            "initials": "SLB",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "FC Paços de Ferreira",
+            "year": 1950,
+            "initials": "FCPF",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "SC Espinho",
+            "year": 1914,
+            "initials": "SCE",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 4,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "SC Arcozelo",
+            "year": 1963,
+            "initials": "SLB",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 5,
+            "deleted_at": null
+        },
+        {
+            "id": 5,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "AA Coimbra",
+            "year": 1887,
+            "initials": "AAC",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 2,
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "created_at": "2019-11-05 15:25:54",
+            "updated_at": "2019-11-05 15:25:54",
+            "name": "SLBenfica",
+            "year": 1904,
+            "initials": "SLB",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 7,
+            "created_at": "2019-11-05 17:40:01",
+            "updated_at": "2019-11-05 17:40:01",
+            "name": "Sporting CP",
+            "year": 1906,
+            "initials": "SCP",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 8,
+            "created_at": "2019-11-05 18:36:49",
+            "updated_at": "2019-11-05 18:36:49",
+            "name": "Nazaré FC",
+            "year": 1801,
+            "initials": "NFC",
+            "photo": null,
+            "country_id": 33,
+            "division_id": 5,
+            "deleted_at": null
+        },
+        {
+            "id": 9,
+            "created_at": "2019-11-06 11:51:36",
+            "updated_at": "2019-11-06 11:51:36",
+            "name": "Beira-Mar",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 10,
+            "created_at": "2019-11-06 12:42:52",
+            "updated_at": "2019-11-06 12:42:52",
+            "name": "Esgueira",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 11,
+            "created_at": "2019-11-06 12:43:59",
+            "updated_at": "2019-11-06 12:43:59",
+            "name": "Taboeira",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 12,
+            "created_at": "2019-11-06 13:04:35",
+            "updated_at": "2019-11-06 13:04:35",
+            "name": "Taboeiraa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 13,
+            "created_at": "2019-11-06 13:10:15",
+            "updated_at": "2019-11-06 13:10:15",
+            "name": "Taboeiraaa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 14,
+            "created_at": "2019-11-06 13:15:56",
+            "updated_at": "2019-11-06 13:15:56",
+            "name": "Taboeiraaaa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 15,
+            "created_at": "2019-11-06 13:38:27",
+            "updated_at": "2019-11-06 13:38:27",
+            "name": "Taboeiraaaaaaaaaa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 16,
+            "created_at": "2019-11-06 16:57:19",
+            "updated_at": "2019-11-06 16:57:19",
+            "name": "asddsajksa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 17,
+            "created_at": "2019-11-06 17:02:44",
+            "updated_at": "2019-11-06 17:02:44",
+            "name": "asddsajksadsadsa",
+            "year": 1950,
+            "initials": "BMFC",
+            "photo": null,
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 18,
+            "created_at": "2019-11-06 17:08:40",
+            "updated_at": "2019-11-06 17:08:40",
+            "name": "Upload",
+            "year": 2019,
+            "initials": "BMFC",
+            "photo": "images\/JImVKyHwzorLoieujkrNUUFSdJ0OBHcO5bzLduHO.png",
+            "country_id": 34,
+            "division_id": 1,
+            "deleted_at": null
+        },
+        {
+            "id": 19,
+            "created_at": "2019-11-08 00:46:30",
+            "updated_at": "2019-11-08 00:46:30",
+            "name": "Rita Pinho",
+            "year": 2019,
+            "initials": "RP",
+            "photo": "C:\\xampp\\tmp\\php8228.tmp",
+            "country_id": 33,
+            "division_id": 2,
+            "deleted_at": null
+        },
+        {
+            "id": 20,
+            "created_at": "2019-11-08 00:54:22",
+            "updated_at": "2019-11-08 00:54:22",
+            "name": "Casa da Luísa",
+            "year": 2019,
+            "initials": "CDL",
+            "photo": "C:\\xampp\\tmp\\phpB4FF.tmp",
+            "country_id": 13,
+            "division_id": 2,
+            "deleted_at": null
+        },
+        {
+            "id": 21,
+            "created_at": "2019-11-08 00:56:17",
+            "updated_at": "2019-11-08 00:56:17",
+            "name": "Casa da Luísaa",
+            "year": 2019,
+            "initials": "CDL",
+            "photo": "C:\\xampp\\tmp\\php76D6.tmp",
+            "country_id": 13,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 22,
+            "created_at": "2019-11-08 01:01:37",
+            "updated_at": "2019-11-08 01:01:37",
+            "name": "Rita Pinhoooo",
+            "year": 1999,
+            "initials": "gu",
+            "photo": "C:\\xampp\\tmp\\php58C8.tmp",
+            "country_id": 33,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 23,
+            "created_at": "2019-11-08 01:04:08",
+            "updated_at": "2019-11-08 01:04:08",
+            "name": "Rita Pinhokkkj",
+            "year": 1998,
+            "initials": "huk",
+            "photo": "C:\\xampp\\tmp\\phpA559.tmp",
+            "country_id": 33,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 24,
+            "created_at": "2019-11-08 01:09:32",
+            "updated_at": "2019-11-08 01:09:32",
+            "name": "Rita Pinhokkkjnhkj",
+            "year": 1998,
+            "initials": "huk",
+            "photo": "C:\\xampp\\tmp\\php9797.tmp",
+            "country_id": 33,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 25,
+            "created_at": "2019-11-08 01:12:26",
+            "updated_at": "2019-11-08 01:12:26",
+            "name": "Casa da Luísaaaaaaaaaaa",
+            "year": 1988,
+            "initials": "hdh",
+            "photo": "C:\\xampp\\tmp\\php417A.tmp",
+            "country_id": 14,
+            "division_id": 3,
+            "deleted_at": null
+        },
+        {
+            "id": 26,
+            "created_at": "2019-11-08 01:15:00",
+            "updated_at": "2019-11-08 01:15:00",
+            "name": "assas",
+            "year": 1998,
+            "initials": "assa",
+            "photo": "images\/lseelIqDdzgo1AqS1C5jFsv4tXNvc7C8WQMPz9EP.png",
+            "country_id": 14,
+            "division_id": 2,
+            "deleted_at": null
+        }
+    ],
+    "message": "Lista de equipas",
+    "result": "ok"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/team</code></p>
+<!-- END_702da605377efe10b66841e103c2080c -->
+<!-- START_eddf7138dffc66675044530681a94451 -->
+<h2>Show the form for creating a new resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/team/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/team/create</code></p>
+<!-- END_eddf7138dffc66675044530681a94451 -->
+<!-- START_bcc537b5104633dd83bbdfffbf5f12d0 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/team" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"omnis","year":3,"initials":"recusandae","photo":"magni","country_id":4,"division_id":12}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "omnis",
+    "year": 3,
+    "initials": "recusandae",
+    "photo": "magni",
+    "country_id": 4,
+    "division_id": 12
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/team</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome da Equipa</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Ano de fundação</td>
+</tr>
+<tr>
+<td><code>initials</code></td>
+<td>string</td>
+<td>required</td>
+<td>Sigla</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Símbolo</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+<tr>
+<td><code>division_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da divisão</td>
+</tr>
+</tbody>
+</table>
+<!-- END_bcc537b5104633dd83bbdfffbf5f12d0 -->
+<!-- START_beac535d0cd7ca93ba00538bb3b11808 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "created_at": "2019-11-05 15:25:54",
+    "updated_at": "2019-11-05 15:25:54",
+    "name": "SL Benfica",
+    "year": 1904,
+    "initials": "SLB",
+    "photo": null,
+    "country_id": 33,
+    "division_id": 1,
+    "deleted_at": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/team/{team}</code></p>
+<!-- END_beac535d0cd7ca93ba00538bb3b11808 -->
+<!-- START_ccd059e4062b469a6595454b1ebd0df4 -->
+<h2>Show the form for editing the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/team/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/team/{team}/edit</code></p>
+<!-- END_ccd059e4062b469a6595454b1ebd0df4 -->
+<!-- START_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"velit","year":8,"initials":"maiores","photo":"aut","country_id":19,"division_id":16}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "velit",
+    "year": 8,
+    "initials": "maiores",
+    "photo": "aut",
+    "country_id": 19,
+    "division_id": 16
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/team/{team}</code></p>
+<p><code>PATCH api/team/{team}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nome da Equipa</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Ano de fundação</td>
+</tr>
+<tr>
+<td><code>initials</code></td>
+<td>string</td>
+<td>required</td>
+<td>Sigla</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td>image</td>
+<td>required</td>
+<td>Símbolo</td>
+</tr>
+<tr>
+<td><code>country_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id do país</td>
+</tr>
+<tr>
+<td><code>division_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>Id da divisão</td>
+</tr>
+</tbody>
+</table>
+<!-- END_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
+<!-- START_330a124273ea911d56ffb5cb3e9bbd43 -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/team/{team}</code></p>
+<!-- END_330a124273ea911d56ffb5cb3e9bbd43 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
