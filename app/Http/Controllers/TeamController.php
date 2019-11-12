@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TeamStoreRequest;
 use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -48,14 +49,14 @@ class TeamController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TeamStoreRequest $request)
     {
         //
         $data = $request->all();
         /*MANEIRA SIMPLES $team = Team::create($data);*/
         /*OUTRA MANEIRA*/
 
-
+        /*
         $validator = Validator::make($data,
             [
                 'name' => 'unique:teams,name|required|string|max:100',
@@ -88,7 +89,7 @@ class TeamController extends Controller
             ]);
 
         if ($validator->fails())
-            return $validator->errors()->all();
+            return $validator->errors()->all();*/
 
         $file = $request->file('photo')->store('images');
 
@@ -110,7 +111,7 @@ class TeamController extends Controller
             'message' => 'Equipa adicionada',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 201);
     }
 
     /**
@@ -194,7 +195,7 @@ class TeamController extends Controller
             'message' => 'Equipa editada',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 
     /**
@@ -212,6 +213,6 @@ class TeamController extends Controller
             'message' => 'Equipa apagada',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LeaderStoreRequest;
 use App\Leader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -47,7 +48,7 @@ class LeaderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LeaderStoreRequest $request)
     {
         //
         $data = $request->all();
@@ -62,7 +63,7 @@ class LeaderController extends Controller
             ]
         );*/
 
-        $validator = Validator::make($data,
+        /*$validator = Validator::make($data,
             [
                 'name' => 'required|string|max:100',
                 'birth_date' => 'required|date',
@@ -86,7 +87,7 @@ class LeaderController extends Controller
             ]);
 
         if ($validator->fails())
-            return $validator->errors()->all();
+            return $validator->errors()->all();*/
 
         $file = $request->file('photo')->store('images');
 
@@ -98,7 +99,7 @@ class LeaderController extends Controller
             'message' => 'Dirigente adicionado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 201);
     }
 
     /**
@@ -177,7 +178,7 @@ class LeaderController extends Controller
             'message' => 'Dirigente editado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 
     /**
@@ -195,6 +196,6 @@ class LeaderController extends Controller
             'message' => 'Dirigente apagado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 }

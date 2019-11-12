@@ -18,25 +18,44 @@ class MainController extends Controller
     {
         return view('welcome');
     }
+    public function team(Request $request)
+    {
+        $checkrequest = $request->exists('id');
+        if ($checkrequest==false) {
+            return redirect('/list_teams');
+        } else {
+            $data = $request->all();
+            $teams = Team::whereid($data['id'])->get();
+            $players = Player::whereteam_id($data['id'])->get();
+            $leaders = Leader::whereteam_id($data['id'])->get();
+            $coaches = Coach::whereteam_id($data['id'])->get();
+            return view('team')
+                ->with('teams',$teams)
+                ->with('players',$players)
+                ->with('leaders',$leaders)
+                ->with('coaches',$coaches);
+        }
+    }
     public function list_teams() {
-        $teams = Team::all();
+        //$teams = Team::all();
+        $teams = Team::orderBy('division_id', 'asc')->get();
         return view('teams')->with('teams', $teams);
     }
 
     public function list_players() {
-        $players = Player::all();
-        $teams = Team::all();
-        return view('players')->with('players', $players)->with('teams', $teams);
+        //$players = Player::all();
+        $players = Player::orderBy('team_id', 'asc')->get();
+        return view('players')->with('players', $players);
     }
     public function list_coaches() {
-        $coaches = Coach::all();
-        $teams = Team::all();
-        return view('coaches')->with('coaches', $coaches)->with('teams', $teams);
+        //$coaches = Coach::all();
+        $coaches = Coach::orderBy('team_id', 'asc')->get();
+        return view('coaches')->with('coaches', $coaches);
     }
     public function list_leaders() {
-        $leaders = Leader::all();
-        $teams = Team::all();
-        return view('leaders')->with('leaders', $leaders)->with('teams', $teams);
+        //$leaders = Leader::all();
+        $leaders = Leader::orderBy('team_id', 'asc')->get();
+        return view('leaders')->with('leaders', $leaders);
     }
     public function form_teams()
     {
@@ -218,5 +237,215 @@ class MainController extends Controller
 
         //return redirect()->route('list_leaders');
         return redirect('/list_leaders');
+    }
+
+    public function edit_team(Request $request)
+    {
+        $checkrequest = $request->exists('id');
+        if ($checkrequest==false) {
+            return redirect('/list_teams');
+        } else {
+            $data = $request->all();
+            $teams = Team::whereid($data['id'])->get();
+            $divisions = Division::all();
+            $countries = Country::all();
+            $players = Player::whereteam_id($data['id'])->get();
+            $leaders = Leader::whereteam_id($data['id'])->get();
+            $coaches = Coach::whereteam_id($data['id'])->get();
+            return view('edit_team')
+                ->with('teams',$teams)
+                ->with('divisions', $divisions)
+                ->with('countries', $countries)
+                ->with('players', $players)
+                ->with('leaders', $leaders)
+                ->with('coaches', $coaches);
+        }
+    }
+    public function update_team(Request $request, Team $team)
+    {
+        $this->validate($request,
+            [
+                'name' => 'unique:teams,name|required|string|max:100',
+                'year' => 'required|integer|max:2019|min:1800',
+                'initials' => 'required|string|max:4',
+                'photo' => 'required|image',
+                'country_id' => 'required|integer|exists:countries,id',
+                'division_id' => 'required|integer|exists:divisions,id'
+            ],
+            [
+                'name.required' => 'Insira um nome!',
+                'name.unique' => 'Esse clube já existe!',
+                'name.max' => 'Nome demasiado longo!',
+                'name.string' => 'Formato de nome inválido!',
+                'year.required' => 'Insira um ano de fundação!',
+                'year.integer' => 'Formato inválido, insira um número!',
+                'year.max' => 'Insira um ano válido!',
+                'year.min' => 'Insira um ano válido!',
+                'photo.required' => 'Insira uma fotografia',
+                'photo.image' => 'Formato de imagem inválido!',
+                'division_id.integer' => 'Formato inválido, insira um número!',
+                'division_id.exists' => 'Essa divisão não existe!',
+                'division_id.required' => 'Insira uma divisão!',
+                'country_id.required' => 'Insira um país!',
+                'country_id.integer' => 'Formato inválido, insira um número!',
+                'country_id.exists' => 'Esse país não existe!',
+                'initials.required' => 'Insira uma sigla!',
+                'initials.string' => 'Formato inválido, insira texto!',
+                'initials.max' => 'Insira no máximo 4 caracteres!',
+            ]);
+
+        $data = $request->all();
+
+        $file = $request->file('photo')->store('images');
+
+        $data['photo'] = $file;
+
+        $team->update($data);
+
+        //return redirect()->route('list_coaches');
+        return redirect('/');
+    }
+    public function edit_player(Request $request)
+    {
+        $checkrequest = $request->exists('id');
+        if ($checkrequest==false) {
+            return redirect('/');
+        } else {
+            $data = $request->all();
+            $players = Player::whereid($data['id'])->get();
+            $positions = Position::all();
+            $countries = Country::all();
+            $teams = Team::all();
+            return view('edit_player')
+                ->with('teams',$teams)
+                ->with('positions', $positions)
+                ->with('countries', $countries)
+                ->with('players', $players);
+        }
+    }
+    public function update_player(Request $request, Player $player)
+    {
+        $this->validate($request,
+            [
+                'name' => 'string|max:100',
+                'birth_date' => 'date',
+                'team_id' => 'exists:teams,id',
+                'country_id' => 'integer|exists:countries,id',
+                'position_id' => 'integer|exists:positions,id'
+            ],
+            [
+                'name.max' => 'Nome demasiado longo!',
+                'name.string' => 'Formato de nome inválido!',
+                'birth_date.date' => 'Formato de data inválido! Exemplo: 1998-12-13',
+                'team_id.integer' => 'Formato inválido, insira um número!',
+                'team_id.exists' => 'Essa equipa não existe!',
+                'country_id.integer' => 'Formato inválido, insira um número!',
+                'country_id.exists' => 'Esse país não existe!',
+                'position_id.integer' => 'Formato inválido, insira um número!',
+                'position_id.exists' => 'Esse posição não existe!',
+            ]);
+
+        $data = $request->all();
+
+        $file = $request->file('photo')->store('images');
+
+        $data['photo'] = $file;
+
+        $player->update($data);
+
+        //return redirect()->route('list_coaches');
+        return redirect('/');
+    }
+    public function edit_coach(Request $request)
+    {
+        $checkrequest = $request->exists('id');
+        if ($checkrequest==false) {
+            return redirect('/');
+        } else {
+            $data = $request->all();
+            $coaches = Coach::whereid($data['id'])->get();
+            $countries = Country::all();
+            $teams = Team::all();
+            return view('edit_coach')
+                ->with('teams',$teams)
+                ->with('countries', $countries)
+                ->with('coaches', $coaches);
+        }
+    }
+    public function update_coach(Request $request, Coach $coach)
+    {
+        $this->validate($request,
+            [
+                'name' => 'string|max:100',
+                'birth_date' => 'date',
+                'team_id' => 'exists:teams,id',
+                'country_id' => 'integer|exists:countries,id'
+            ],
+            [
+                'name.max' => 'Nome demasiado longo!',
+                'name.string' => 'Formato de nome inválido!',
+                'birth_date.date' => 'Formato de data inválido! Exemplo: 1998-12-13',
+                'team_id.integer' => 'Formato inválido, insira um número!',
+                'team_id.exists' => 'Essa equipa não existe!',
+                'country_id.integer' => 'Formato inválido, insira um número!',
+                'country_id.exists' => 'Esse país não existe!'
+            ]);
+
+        $data = $request->all();
+
+        $file = $request->file('photo')->store('images');
+
+        $data['photo'] = $file;
+
+        $coach->update($data);
+
+        //return redirect()->route('list_coaches');
+        return redirect('/');
+    }
+    public function edit_leader(Request $request)
+    {
+        $checkrequest = $request->exists('id');
+        if ($checkrequest==false) {
+            return redirect('/');
+        } else {
+            $data = $request->all();
+            $leaders = Leader::whereid($data['id'])->get();
+            $countries = Country::all();
+            $teams = Team::all();
+            return view('edit_leader')
+                ->with('teams',$teams)
+                ->with('countries', $countries)
+                ->with('leaders', $leaders);
+        }
+    }
+    public function update_leader(Request $request, Leader $leader)
+    {
+        $this->validate($request,
+            [
+                'name' => 'string|max:100',
+                'birth_date' => 'date',
+                'team_id' => 'exists:teams,id',
+                'country_id' => 'integer|exists:countries,id'
+            ],
+            [
+                'name.max' => 'Nome demasiado longo!',
+                'name.string' => 'Formato de nome inválido!',
+                'birth_date.date' => 'Formato de data inválido! Exemplo: 1998-12-13',
+                'team_id.integer' => 'Formato inválido, insira um número!',
+                'team_id.exists' => 'Essa equipa não existe!',
+                'country_id.integer' => 'Formato inválido, insira um número!',
+                'country_id.exists' => 'Esse país não existe!'
+            ]);
+
+        $data = $request->all();
+
+        $file = $request->file('photo')->store('images');
+
+        $data['photo'] = $file;
+
+        $leader->update($data);
+
+        //return redirect()->route('list_coaches');
+        return redirect('/');
     }
 }

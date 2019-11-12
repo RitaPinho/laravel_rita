@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PlayerStoreRequest;
 use App\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -48,7 +49,7 @@ class PlayerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerStoreRequest $request)
     {
         //
         $data = $request->all();
@@ -63,6 +64,7 @@ class PlayerController extends Controller
                 'position_id' => $data['position_id']
             ]
         );*/
+        /*
         $validator = Validator::make($data,
             [
                 'name' => 'required|string|max:100',
@@ -91,7 +93,7 @@ class PlayerController extends Controller
             ]);
 
         if ($validator->fails())
-            return $validator->errors()->all();
+            return $validator->errors()->all();*/
 
         $file = $request->file('photo')->store('images');
 
@@ -103,7 +105,7 @@ class PlayerController extends Controller
             'message' => 'Jogador adicionado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 201);
     }
 
     /**
@@ -183,7 +185,7 @@ class PlayerController extends Controller
             'message' => 'Jogador editado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 
     /**
@@ -201,6 +203,6 @@ class PlayerController extends Controller
             'message' => 'Jogador apagado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 }

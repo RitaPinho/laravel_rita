@@ -7,15 +7,26 @@
                 @foreach($leaders as $leader)
 
                     <div class="card">
-                        <div class="card-header"><p>{{ $leader->name  }}</p></div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>{{ $leader->name  }}</b></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="edit_leader/?id={{ $leader->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p>{{ $leader->year  }}</p>
-                                    <p>{{ $leader->initials  }}</p>
-                                    <p>{{ $leader->country->country  }}</p>
-                                    <p>{{ $leader->team->name  }}</p>
+                                    <p><b>Data de nascimento: </b>{{ $leader->birth_date  }}</p>
+                                    <p><b>Equipa: </b>{{ $leader->team->name  }}</p>
+                                    <p><b>País: </b>{{ $leader->country->country  }}</p>
                                 </div>
                                 <div class="col-md-6">
                                     <img class="img-fluid" src="/uploads/{{ $leader->photo  }}">

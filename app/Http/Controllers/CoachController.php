@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Coach;
+use App\Http\Requests\CoachStoreRequest;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -47,7 +48,7 @@ class CoachController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CoachStoreRequest $request)
     {
         //
         $data = $request->all();
@@ -62,7 +63,7 @@ class CoachController extends Controller
             ]
         );*/
 
-        $validator = Validator::make($data,
+        /*$validator = Validator::make($data,
             [
                 'name' => 'required|string|max:100',
                 'birth_date' => 'required|date',
@@ -87,7 +88,7 @@ class CoachController extends Controller
             ]);
 
         if ($validator->fails())
-            return $validator->errors()->all();
+            return $validator->errors()->all();*/
 
         $file = $request->file('photo')->store('images');
 
@@ -99,7 +100,7 @@ class CoachController extends Controller
             'message' => 'Treinador adicionado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 201);
         //return response($coach, 201);
 
     }
@@ -180,7 +181,7 @@ class CoachController extends Controller
             'message' => 'Treinador editado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 
     /**
@@ -198,6 +199,6 @@ class CoachController extends Controller
             'message' => 'Treinador apagado',
             'result' => 'ok'
         ];
-        return response($response);
+        return response($response, 200);
     }
 }

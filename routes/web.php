@@ -21,6 +21,18 @@ Route::get('/list_players', 'MainController@list_players')->name('players');
 Route::get('/list_coaches', 'MainController@list_coaches')->name('coaches');
 Route::get('/list_leaders', 'MainController@list_leaders')->name('leaders');
 
+/*Route::get('/team', 'MainController@team')->name('team');*/
+
+Route::get('/edit_team', 'MainController@edit_team')->name('edit_form');
+Route::post('/edit_team', 'MainController@update_team')->name('update_team');
+Route::get('/edit_player', 'MainController@edit_player')->name('edit_form');
+Route::post('/edit_player', 'MainController@update_player')->name('update_player');
+Route::get('/edit_coach', 'MainController@edit_coach')->name('edit_form');
+Route::post('/edit_coach', 'MainController@update_coach')->name('update_coach');
+Route::get('/edit_leader', 'MainController@edit_leader')->name('edit_form');
+Route::post('/edit_leader', 'MainController@update_leader')->name('update_leader');
+
+
 Route::get('/insert_teams', 'MainController@form_teams')->name('insert_form');
 Route::post('/insert_teams', 'MainController@insert_teams')->name('insert_teams');
 Route::get('/insert_players', 'MainController@form_players')->name('insert_form');

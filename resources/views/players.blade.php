@@ -7,15 +7,27 @@
                 @foreach($players as $player)
 
                     <div class="card">
-                        <div class="card-header"><p>{{ $player->name  }}</p></div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>{{ $player->name  }}</b></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="edit_player/?id={{ $player->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p>{{ $player->year  }}</p>
-                                    <p>{{ $player->initials  }}</p>
-                                    <p>{{ $player->country->country  }}</p>
-                                    <p>{{ $player->team->name  }}</p>
+                                    <p><b>Data de nascimento: </b>{{ $player->birth_date  }}</p>
+                                    <p><b>Equipa: </b>{{ $player->team->name  }}</p>
+                                    <p><b>País: </b>{{ $player->country->country  }}</p>
+                                    <p><b>Posição: </b>{{ $player->position->position  }}</p>
                                 </div>
                                 <div class="col-md-6">
                                     <img class="img-fluid" src="/uploads/{{ $player->photo  }}">

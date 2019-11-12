@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ed9ad9-a455-4603-b6b8-e9fa934d866d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_111547_alter_players_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_112317_alter_teams_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_112458_alter_coaches_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_112642_alter_leaders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/coaches.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/insert_coaches.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/insert_leaders.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/insert_players.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/leaders.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/players.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/boilerplate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boilerplate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit_coach.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit_leader.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit_player.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit_team.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/team.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeaderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeaderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PlayerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlayerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/coaches.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/coaches.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/leaders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/leaders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/players.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/players.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -192,7 +190,11 @@
       <workItem from="1573172048310" duration="838000" />
       <workItem from="1573173517707" duration="6078000" />
       <workItem from="1573205756197" duration="5203000" />
-      <workItem from="1573212136092" duration="1654000" />
+      <workItem from="1573212136092" duration="5420000" />
+      <workItem from="1573230632723" duration="2218000" />
+      <workItem from="1573466305710" duration="11491000" />
+      <workItem from="1573511729123" duration="4769000" />
+      <workItem from="1573553650886" duration="11003000" />
     </task>
     <servers />
   </component>

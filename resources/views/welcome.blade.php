@@ -81,18 +81,18 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Rita Pinho - 85182
+                    Taça UA Futsal
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/list_teams">Equipas</a>
+                    <a href="/list_players">Jogadores</a>
+                    <a href="/list_leaders">Dirigentes</a>
+                    <a href="/list_coaches">Treinadores</a><br><br><br><br>
+                    <a href="/insert_teams">Inserir Equipas</a>
+                    <a href="/insert_players">Inserir Jogadores</a>
+                    <a href="/insert_leaders">Inserir Dirigentes</a>
+                    <a href="/insert_coaches">Inserir Treinadores</a>
                 </div>
             </div>
         </div>
