@@ -23,6 +23,344 @@ Welcome to the generated API reference.
 #general
 
 
+<!-- START_702da605377efe10b66841e103c2080c -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/team" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/team`
+
+
+<!-- END_702da605377efe10b66841e103c2080c -->
+
+<!-- START_eddf7138dffc66675044530681a94451 -->
+## Show the form for creating a new resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/team/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/team/create`
+
+
+<!-- END_eddf7138dffc66675044530681a94451 -->
+
+<!-- START_bcc537b5104633dd83bbdfffbf5f12d0 -->
+## Store a newly created resource in storage.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/team" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"voluptatem","year":13,"initials":"possimus","photo":"qui","country_id":10,"division_id":20}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "voluptatem",
+    "year": 13,
+    "initials": "possimus",
+    "photo": "qui",
+    "country_id": 10,
+    "division_id": 20
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/team`
+
+#### Body Parameters
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    `name` | string |  required  | Nome da Equipa
+        `year` | integer |  required  | Ano de fundação
+        `initials` | string |  required  | Sigla
+        `photo` | image |  required  | Símbolo
+        `country_id` | integer |  required  | Id do país
+        `division_id` | integer |  required  | Id da divisão
+    
+<!-- END_bcc537b5104633dd83bbdfffbf5f12d0 -->
+
+<!-- START_beac535d0cd7ca93ba00538bb3b11808 -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/team/{team}`
+
+
+<!-- END_beac535d0cd7ca93ba00538bb3b11808 -->
+
+<!-- START_ccd059e4062b469a6595454b1ebd0df4 -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/team/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/team/{team}/edit`
+
+
+<!-- END_ccd059e4062b469a6595454b1ebd0df4 -->
+
+<!-- START_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
+## Update the specified resource in storage.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"porro","year":19,"initials":"rerum","photo":"ullam","country_id":7,"division_id":15}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "porro",
+    "year": 19,
+    "initials": "rerum",
+    "photo": "ullam",
+    "country_id": 7,
+    "division_id": 15
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT api/team/{team}`
+
+`PATCH api/team/{team}`
+
+#### Body Parameters
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    `name` | string |  required  | Nome da Equipa
+        `year` | integer |  required  | Ano de fundação
+        `initials` | string |  required  | Sigla
+        `photo` | image |  required  | Símbolo
+        `country_id` | integer |  required  | Id do país
+        `division_id` | integer |  required  | Id da divisão
+    
+<!-- END_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
+
+<!-- START_330a124273ea911d56ffb5cb3e9bbd43 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/api/team/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/team/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE api/team/{team}`
+
+
+<!-- END_330a124273ea911d56ffb5cb3e9bbd43 -->
+
 <!-- START_6500c6b37eb0891b4e5a47893a5a3376 -->
 ## Display a listing of the resource.
 
@@ -54,98 +392,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "created_at": "2019-11-05 15:36:28",
-            "updated_at": "2019-11-05 15:36:28",
-            "name": "Pizzi",
-            "birth_date": "1989-10-06",
-            "photo": null,
-            "team_id": 1,
-            "country_id": 33,
-            "position_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 2,
-            "created_at": "2019-11-05 15:36:28",
-            "updated_at": "2019-11-05 15:36:28",
-            "name": "Pedrinho",
-            "birth_date": "1992-12-20",
-            "photo": null,
-            "team_id": 2,
-            "country_id": 33,
-            "position_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 3,
-            "created_at": "2019-11-05 15:36:28",
-            "updated_at": "2019-11-05 15:36:28",
-            "name": "Carlitos",
-            "birth_date": "1985-07-23",
-            "photo": null,
-            "team_id": 3,
-            "country_id": 33,
-            "position_id": 4,
-            "deleted_at": null
-        },
-        {
-            "id": 5,
-            "created_at": "2019-11-05 17:45:01",
-            "updated_at": "2019-11-05 18:49:01",
-            "name": "Odysseas Vlachodimos",
-            "birth_date": "1994-04-26",
-            "photo": null,
-            "team_id": 1,
-            "country_id": 19,
-            "position_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 6,
-            "created_at": "2019-11-06 11:49:34",
-            "updated_at": "2019-11-06 11:49:34",
-            "name": "Manuel Lopes",
-            "birth_date": "1950-12-01",
-            "photo": null,
-            "team_id": 8,
-            "country_id": 34,
-            "position_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 7,
-            "created_at": "2019-11-06 17:31:41",
-            "updated_at": "2019-11-06 17:31:41",
-            "name": "Rui",
-            "birth_date": "2019-01-01",
-            "photo": "images\/9F6i3VdjW5ApJn9fFG9MIaQv6jRfv7toYYldCzPF.jpeg",
-            "team_id": 6,
-            "country_id": 34,
-            "position_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 8,
-            "created_at": "2019-11-08 01:37:47",
-            "updated_at": "2019-11-08 01:37:47",
-            "name": "Pedro Pinho",
-            "birth_date": "2005-09-05",
-            "photo": "images\/HxMGLV1gsPK48QccWxOe5k1kdF4UEe5dTRnHNnT1.png",
-            "team_id": 2,
-            "country_id": 13,
-            "position_id": 1,
-            "deleted_at": null
-        }
-    ],
-    "message": "Lista de dirigentes",
-    "result": "ok"
+    "message": "Unauthenticated."
 }
 ```
 
@@ -186,6 +437,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/player/create`
@@ -203,7 +461,7 @@ curl -X POST \
     "http://localhost/api/player" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"deserunt","birth_date":"quas","photo":"qui","team_id":10,"country_id":19,"position_id":6}'
+    -d '{"name":"fugiat","birth_date":"ratione","photo":"amet","team_id":6,"country_id":9,"position_id":2}'
 
 ```
 
@@ -218,12 +476,12 @@ let headers = {
 };
 
 let body = {
-    "name": "deserunt",
-    "birth_date": "quas",
-    "photo": "qui",
-    "team_id": 10,
-    "country_id": 19,
-    "position_id": 6
+    "name": "fugiat",
+    "birth_date": "ratione",
+    "photo": "amet",
+    "team_id": 6,
+    "country_id": 9,
+    "position_id": 2
 }
 
 fetch(url, {
@@ -283,20 +541,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "id": 1,
-    "created_at": "2019-11-05 15:36:28",
-    "updated_at": "2019-11-05 15:36:28",
-    "name": "Pizzi",
-    "birth_date": "1989-10-06",
-    "photo": null,
-    "team_id": 1,
-    "country_id": 33,
-    "position_id": 3,
-    "deleted_at": null
+    "message": "Unauthenticated."
 }
 ```
 
@@ -337,6 +586,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/player/{player}/edit`
@@ -354,7 +610,7 @@ curl -X PUT \
     "http://localhost/api/player/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"rerum","birth_date":"vel","photo":"eligendi","team_id":10,"country_id":17,"position_id":6}'
+    -d '{"name":"dolorem","birth_date":"aspernatur","photo":"reiciendis","team_id":15,"country_id":9,"position_id":2}'
 
 ```
 
@@ -369,12 +625,12 @@ let headers = {
 };
 
 let body = {
-    "name": "rerum",
-    "birth_date": "vel",
-    "photo": "eligendi",
-    "team_id": 10,
-    "country_id": 17,
-    "position_id": 6
+    "name": "dolorem",
+    "birth_date": "aspernatur",
+    "photo": "reiciendis",
+    "team_id": 15,
+    "country_id": 9,
+    "position_id": 2
 }
 
 fetch(url, {
@@ -474,102 +730,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "created_at": "2019-11-05 15:43:19",
-            "updated_at": "2019-11-05 15:43:19",
-            "name": "José Gomes",
-            "birth_date": "1958-09-12",
-            "photo": null,
-            "team_id": 4,
-            "country_id": 15,
-            "deleted_at": null
-        },
-        {
-            "id": 2,
-            "created_at": "2019-11-05 15:43:19",
-            "updated_at": "2019-11-05 15:43:19",
-            "name": "Mário Rui",
-            "birth_date": "1978-09-12",
-            "photo": null,
-            "team_id": 3,
-            "country_id": 4,
-            "deleted_at": null
-        },
-        {
-            "id": 3,
-            "created_at": "2019-11-05 15:43:19",
-            "updated_at": "2019-11-05 15:43:19",
-            "name": "Pepa",
-            "birth_date": "1980-12-14",
-            "photo": null,
-            "team_id": 2,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 4,
-            "created_at": "2019-11-05 15:43:19",
-            "updated_at": "2019-11-05 15:43:19",
-            "name": "Bruno Lage",
-            "birth_date": "1976-05-12",
-            "photo": null,
-            "team_id": 1,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 6,
-            "created_at": "2019-11-05 18:21:31",
-            "updated_at": "2019-11-06 11:09:12",
-            "name": "Luís",
-            "birth_date": "1996-09-12",
-            "photo": null,
-            "team_id": 7,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 7,
-            "created_at": "2019-11-06 11:34:07",
-            "updated_at": "2019-11-06 11:34:07",
-            "name": "Manuel Lopes",
-            "birth_date": "1950-12-01",
-            "photo": null,
-            "team_id": 8,
-            "country_id": 34,
-            "deleted_at": null
-        },
-        {
-            "id": 8,
-            "created_at": "2019-11-06 17:32:30",
-            "updated_at": "2019-11-06 17:32:30",
-            "name": "Rui",
-            "birth_date": "2019-01-01",
-            "photo": "images\/gb0QLQEgRxspBl13caiH48M66SjpC1nkr65wQQRn.jpeg",
-            "team_id": 6,
-            "country_id": 34,
-            "deleted_at": null
-        },
-        {
-            "id": 9,
-            "created_at": "2019-11-08 01:50:26",
-            "updated_at": "2019-11-08 01:50:26",
-            "name": "Rui Rui",
-            "birth_date": "1998-12-21",
-            "photo": "images\/5fFVih0m5a2GqYUfYE7JK7NJ1YcI8EcCPRKhwOD5.png",
-            "team_id": 10,
-            "country_id": 33,
-            "deleted_at": null
-        }
-    ],
-    "message": "Lista de treinadores",
-    "result": "ok"
+    "message": "Unauthenticated."
 }
 ```
 
@@ -610,6 +775,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/coach/create`
@@ -627,7 +799,7 @@ curl -X POST \
     "http://localhost/api/coach" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sequi","birth_date":"ipsam","photo":"labore","team_id":10,"country_id":2}'
+    -d '{"name":"deserunt","birth_date":"voluptates","photo":"vel","team_id":14,"country_id":4}'
 
 ```
 
@@ -642,11 +814,11 @@ let headers = {
 };
 
 let body = {
-    "name": "sequi",
-    "birth_date": "ipsam",
-    "photo": "labore",
-    "team_id": 10,
-    "country_id": 2
+    "name": "deserunt",
+    "birth_date": "voluptates",
+    "photo": "vel",
+    "team_id": 14,
+    "country_id": 4
 }
 
 fetch(url, {
@@ -705,19 +877,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "id": 1,
-    "created_at": "2019-11-05 15:43:19",
-    "updated_at": "2019-11-05 15:43:19",
-    "name": "José Gomes",
-    "birth_date": "1958-09-12",
-    "photo": null,
-    "team_id": 4,
-    "country_id": 15,
-    "deleted_at": null
+    "message": "Unauthenticated."
 }
 ```
 
@@ -758,6 +922,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/coach/{coach}/edit`
@@ -775,7 +946,7 @@ curl -X PUT \
     "http://localhost/api/coach/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptatem","birth_date":"ipsum","photo":"dolore","team_id":8,"country_id":5}'
+    -d '{"name":"repudiandae","birth_date":"laboriosam","photo":"expedita","team_id":9,"country_id":16}'
 
 ```
 
@@ -790,11 +961,11 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptatem",
-    "birth_date": "ipsum",
-    "photo": "dolore",
-    "team_id": 8,
-    "country_id": 5
+    "name": "repudiandae",
+    "birth_date": "laboriosam",
+    "photo": "expedita",
+    "team_id": 9,
+    "country_id": 16
 }
 
 fetch(url, {
@@ -893,113 +1064,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "created_at": "2019-11-05 15:45:38",
-            "updated_at": "2019-11-05 15:45:38",
-            "name": "João Afonso",
-            "birth_date": "1987-09-12",
-            "photo": null,
-            "team_id": 4,
-            "country_id": 15,
-            "deleted_at": null
-        },
-        {
-            "id": 2,
-            "created_at": "2019-11-05 15:45:39",
-            "updated_at": "2019-11-05 15:45:39",
-            "name": "Rui Jorge",
-            "birth_date": "1981-09-12",
-            "photo": null,
-            "team_id": 3,
-            "country_id": 4,
-            "deleted_at": null
-        },
-        {
-            "id": 3,
-            "created_at": "2019-11-05 15:45:39",
-            "updated_at": "2019-11-05 15:45:39",
-            "name": "Pedro Pinho",
-            "birth_date": "1999-09-14",
-            "photo": null,
-            "team_id": 2,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 4,
-            "created_at": "2019-11-05 15:45:39",
-            "updated_at": "2019-11-05 15:45:39",
-            "name": "Fábio Costa",
-            "birth_date": "1962-01-02",
-            "photo": null,
-            "team_id": 1,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 5,
-            "created_at": "2019-11-05 17:42:02",
-            "updated_at": "2019-11-05 17:42:02",
-            "name": "Luís Alves",
-            "birth_date": "1996-09-18",
-            "photo": null,
-            "team_id": 7,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 6,
-            "created_at": "2019-11-05 18:23:52",
-            "updated_at": "2019-11-05 18:23:52",
-            "name": "Luís Alves",
-            "birth_date": "1996-09-12",
-            "photo": null,
-            "team_id": 7,
-            "country_id": 33,
-            "deleted_at": null
-        },
-        {
-            "id": 7,
-            "created_at": "2019-11-06 11:48:57",
-            "updated_at": "2019-11-06 11:48:57",
-            "name": "Manuel Lopes",
-            "birth_date": "1950-12-01",
-            "photo": null,
-            "team_id": 8,
-            "country_id": 34,
-            "deleted_at": null
-        },
-        {
-            "id": 8,
-            "created_at": "2019-11-06 17:32:42",
-            "updated_at": "2019-11-06 17:32:42",
-            "name": "Rui",
-            "birth_date": "2019-01-01",
-            "photo": "images\/76Wv0xghCthvCdiuyRRnyBvVEoe5vHiUzHBUYKoT.jpeg",
-            "team_id": 6,
-            "country_id": 34,
-            "deleted_at": null
-        },
-        {
-            "id": 9,
-            "created_at": "2019-11-08 02:01:44",
-            "updated_at": "2019-11-08 02:01:44",
-            "name": "Manuel Marques",
-            "birth_date": "1967-11-12",
-            "photo": "images\/yKR89Qs2mKjReACIwyKhBLKgRAjGIGVBvu6VDiav.png",
-            "team_id": 10,
-            "country_id": 33,
-            "deleted_at": null
-        }
-    ],
-    "message": "Lista de dirigentes",
-    "result": "ok"
+    "message": "Unauthenticated."
 }
 ```
 
@@ -1040,6 +1109,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/leader/create`
@@ -1057,7 +1133,7 @@ curl -X POST \
     "http://localhost/api/leader" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aliquam","birth_date":"repudiandae","photo":"laudantium","team_id":4,"country_id":11}'
+    -d '{"name":"voluptatem","birth_date":"tempora","photo":"cum","team_id":10,"country_id":8}'
 
 ```
 
@@ -1072,11 +1148,11 @@ let headers = {
 };
 
 let body = {
-    "name": "aliquam",
-    "birth_date": "repudiandae",
-    "photo": "laudantium",
-    "team_id": 4,
-    "country_id": 11
+    "name": "voluptatem",
+    "birth_date": "tempora",
+    "photo": "cum",
+    "team_id": 10,
+    "country_id": 8
 }
 
 fetch(url, {
@@ -1114,7 +1190,7 @@ curl -X GET \
     -G "http://localhost/api/leader/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"repellendus","birth_date":"fugit","photo":"quasi","team_id":3,"country_id":5}'
+    -d '{"name":"commodi","birth_date":"quo","photo":"recusandae","team_id":17,"country_id":6}'
 
 ```
 
@@ -1129,11 +1205,11 @@ let headers = {
 };
 
 let body = {
-    "name": "repellendus",
-    "birth_date": "fugit",
-    "photo": "quasi",
-    "team_id": 3,
-    "country_id": 5
+    "name": "commodi",
+    "birth_date": "quo",
+    "photo": "recusandae",
+    "team_id": 17,
+    "country_id": 6
 }
 
 fetch(url, {
@@ -1146,19 +1222,11 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "id": 1,
-    "created_at": "2019-11-05 15:45:38",
-    "updated_at": "2019-11-05 15:45:38",
-    "name": "João Afonso",
-    "birth_date": "1987-09-12",
-    "photo": null,
-    "team_id": 4,
-    "country_id": 15,
-    "deleted_at": null
+    "message": "Unauthenticated."
 }
 ```
 
@@ -1207,6 +1275,13 @@ fetch(url, {
 ```
 
 
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
 
 ### HTTP Request
 `GET api/leader/{leader}/edit`
@@ -1291,653 +1366,5 @@ fetch(url, {
 
 
 <!-- END_0cda8b51e83cf4ebb9ba0c5f57bdb5ad -->
-
-<!-- START_702da605377efe10b66841e103c2080c -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/team" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (200):
-
-```json
-{
-    "data": [
-        {
-            "id": 1,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "SL Benfica",
-            "year": 1904,
-            "initials": "SLB",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 2,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "FC Paços de Ferreira",
-            "year": 1950,
-            "initials": "FCPF",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 3,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "SC Espinho",
-            "year": 1914,
-            "initials": "SCE",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 4,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "SC Arcozelo",
-            "year": 1963,
-            "initials": "SLB",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 5,
-            "deleted_at": null
-        },
-        {
-            "id": 5,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "AA Coimbra",
-            "year": 1887,
-            "initials": "AAC",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 2,
-            "deleted_at": null
-        },
-        {
-            "id": 6,
-            "created_at": "2019-11-05 15:25:54",
-            "updated_at": "2019-11-05 15:25:54",
-            "name": "SLBenfica",
-            "year": 1904,
-            "initials": "SLB",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 7,
-            "created_at": "2019-11-05 17:40:01",
-            "updated_at": "2019-11-05 17:40:01",
-            "name": "Sporting CP",
-            "year": 1906,
-            "initials": "SCP",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 8,
-            "created_at": "2019-11-05 18:36:49",
-            "updated_at": "2019-11-05 18:36:49",
-            "name": "Nazaré FC",
-            "year": 1801,
-            "initials": "NFC",
-            "photo": null,
-            "country_id": 33,
-            "division_id": 5,
-            "deleted_at": null
-        },
-        {
-            "id": 9,
-            "created_at": "2019-11-06 11:51:36",
-            "updated_at": "2019-11-06 11:51:36",
-            "name": "Beira-Mar",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 10,
-            "created_at": "2019-11-06 12:42:52",
-            "updated_at": "2019-11-06 12:42:52",
-            "name": "Esgueira",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 11,
-            "created_at": "2019-11-06 12:43:59",
-            "updated_at": "2019-11-06 12:43:59",
-            "name": "Taboeira",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 12,
-            "created_at": "2019-11-06 13:04:35",
-            "updated_at": "2019-11-06 13:04:35",
-            "name": "Taboeiraa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 13,
-            "created_at": "2019-11-06 13:10:15",
-            "updated_at": "2019-11-06 13:10:15",
-            "name": "Taboeiraaa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 14,
-            "created_at": "2019-11-06 13:15:56",
-            "updated_at": "2019-11-06 13:15:56",
-            "name": "Taboeiraaaa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 15,
-            "created_at": "2019-11-06 13:38:27",
-            "updated_at": "2019-11-06 13:38:27",
-            "name": "Taboeiraaaaaaaaaa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 16,
-            "created_at": "2019-11-06 16:57:19",
-            "updated_at": "2019-11-06 16:57:19",
-            "name": "asddsajksa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 17,
-            "created_at": "2019-11-06 17:02:44",
-            "updated_at": "2019-11-06 17:02:44",
-            "name": "asddsajksadsadsa",
-            "year": 1950,
-            "initials": "BMFC",
-            "photo": null,
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 18,
-            "created_at": "2019-11-06 17:08:40",
-            "updated_at": "2019-11-06 17:08:40",
-            "name": "Upload",
-            "year": 2019,
-            "initials": "BMFC",
-            "photo": "images\/JImVKyHwzorLoieujkrNUUFSdJ0OBHcO5bzLduHO.png",
-            "country_id": 34,
-            "division_id": 1,
-            "deleted_at": null
-        },
-        {
-            "id": 19,
-            "created_at": "2019-11-08 00:46:30",
-            "updated_at": "2019-11-08 00:46:30",
-            "name": "Rita Pinho",
-            "year": 2019,
-            "initials": "RP",
-            "photo": "C:\\xampp\\tmp\\php8228.tmp",
-            "country_id": 33,
-            "division_id": 2,
-            "deleted_at": null
-        },
-        {
-            "id": 20,
-            "created_at": "2019-11-08 00:54:22",
-            "updated_at": "2019-11-08 00:54:22",
-            "name": "Casa da Luísa",
-            "year": 2019,
-            "initials": "CDL",
-            "photo": "C:\\xampp\\tmp\\phpB4FF.tmp",
-            "country_id": 13,
-            "division_id": 2,
-            "deleted_at": null
-        },
-        {
-            "id": 21,
-            "created_at": "2019-11-08 00:56:17",
-            "updated_at": "2019-11-08 00:56:17",
-            "name": "Casa da Luísaa",
-            "year": 2019,
-            "initials": "CDL",
-            "photo": "C:\\xampp\\tmp\\php76D6.tmp",
-            "country_id": 13,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 22,
-            "created_at": "2019-11-08 01:01:37",
-            "updated_at": "2019-11-08 01:01:37",
-            "name": "Rita Pinhoooo",
-            "year": 1999,
-            "initials": "gu",
-            "photo": "C:\\xampp\\tmp\\php58C8.tmp",
-            "country_id": 33,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 23,
-            "created_at": "2019-11-08 01:04:08",
-            "updated_at": "2019-11-08 01:04:08",
-            "name": "Rita Pinhokkkj",
-            "year": 1998,
-            "initials": "huk",
-            "photo": "C:\\xampp\\tmp\\phpA559.tmp",
-            "country_id": 33,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 24,
-            "created_at": "2019-11-08 01:09:32",
-            "updated_at": "2019-11-08 01:09:32",
-            "name": "Rita Pinhokkkjnhkj",
-            "year": 1998,
-            "initials": "huk",
-            "photo": "C:\\xampp\\tmp\\php9797.tmp",
-            "country_id": 33,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 25,
-            "created_at": "2019-11-08 01:12:26",
-            "updated_at": "2019-11-08 01:12:26",
-            "name": "Casa da Luísaaaaaaaaaaa",
-            "year": 1988,
-            "initials": "hdh",
-            "photo": "C:\\xampp\\tmp\\php417A.tmp",
-            "country_id": 14,
-            "division_id": 3,
-            "deleted_at": null
-        },
-        {
-            "id": 26,
-            "created_at": "2019-11-08 01:15:00",
-            "updated_at": "2019-11-08 01:15:00",
-            "name": "assas",
-            "year": 1998,
-            "initials": "assa",
-            "photo": "images\/lseelIqDdzgo1AqS1C5jFsv4tXNvc7C8WQMPz9EP.png",
-            "country_id": 14,
-            "division_id": 2,
-            "deleted_at": null
-        }
-    ],
-    "message": "Lista de equipas",
-    "result": "ok"
-}
-```
-
-### HTTP Request
-`GET api/team`
-
-
-<!-- END_702da605377efe10b66841e103c2080c -->
-
-<!-- START_eddf7138dffc66675044530681a94451 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/team/create" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team/create"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`GET api/team/create`
-
-
-<!-- END_eddf7138dffc66675044530681a94451 -->
-
-<!-- START_bcc537b5104633dd83bbdfffbf5f12d0 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST \
-    "http://localhost/api/team" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json" \
-    -d '{"name":"omnis","year":3,"initials":"recusandae","photo":"magni","country_id":4,"division_id":12}'
-
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "omnis",
-    "year": 3,
-    "initials": "recusandae",
-    "photo": "magni",
-    "country_id": 4,
-    "division_id": 12
-}
-
-fetch(url, {
-    method: "POST",
-    headers: headers,
-    body: body
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`POST api/team`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Nome da Equipa
-        `year` | integer |  required  | Ano de fundação
-        `initials` | string |  required  | Sigla
-        `photo` | image |  required  | Símbolo
-        `country_id` | integer |  required  | Id do país
-        `division_id` | integer |  required  | Id da divisão
-    
-<!-- END_bcc537b5104633dd83bbdfffbf5f12d0 -->
-
-<!-- START_beac535d0cd7ca93ba00538bb3b11808 -->
-## Display the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/team/1" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team/1"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (200):
-
-```json
-{
-    "id": 1,
-    "created_at": "2019-11-05 15:25:54",
-    "updated_at": "2019-11-05 15:25:54",
-    "name": "SL Benfica",
-    "year": 1904,
-    "initials": "SLB",
-    "photo": null,
-    "country_id": 33,
-    "division_id": 1,
-    "deleted_at": null
-}
-```
-
-### HTTP Request
-`GET api/team/{team}`
-
-
-<!-- END_beac535d0cd7ca93ba00538bb3b11808 -->
-
-<!-- START_ccd059e4062b469a6595454b1ebd0df4 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/team/1/edit" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team/1/edit"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`GET api/team/{team}/edit`
-
-
-<!-- END_ccd059e4062b469a6595454b1ebd0df4 -->
-
-<!-- START_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT \
-    "http://localhost/api/team/1" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json" \
-    -d '{"name":"velit","year":8,"initials":"maiores","photo":"aut","country_id":19,"division_id":16}'
-
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team/1"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "velit",
-    "year": 8,
-    "initials": "maiores",
-    "photo": "aut",
-    "country_id": 19,
-    "division_id": 16
-}
-
-fetch(url, {
-    method: "PUT",
-    headers: headers,
-    body: body
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`PUT api/team/{team}`
-
-`PATCH api/team/{team}`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Nome da Equipa
-        `year` | integer |  required  | Ano de fundação
-        `initials` | string |  required  | Sigla
-        `photo` | image |  required  | Símbolo
-        `country_id` | integer |  required  | Id do país
-        `division_id` | integer |  required  | Id da divisão
-    
-<!-- END_8ebc5c0ed5628d8c6f6a4e179f27a212 -->
-
-<!-- START_330a124273ea911d56ffb5cb3e9bbd43 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE \
-    "http://localhost/api/team/1" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/team/1"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`DELETE api/team/{team}`
-
-
-<!-- END_330a124273ea911d56ffb5cb3e9bbd43 -->
 
 

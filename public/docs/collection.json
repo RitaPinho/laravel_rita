@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "Laravel API",
-        "_postman_id": "3897f6f2-6398-4bec-8423-dcdb70b52c70",
+        "_postman_id": "510a6a92-21d5-4798-8004-775c5c28da03",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -11,6 +11,167 @@
             "name": "general",
             "description": "",
             "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Show the form for creating a new resource.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team\/create",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"voluptatem\",\n    \"year\": 13,\n    \"initials\": \"possimus\",\n    \"photo\": \"qui\",\n    \"country_id\": 10,\n    \"division_id\": 20\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team\/{team}",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Show the form for editing the specified resource.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team\/{team}\/edit",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team\/{team}",
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"porro\",\n    \"year\": 19,\n    \"initials\": \"rerum\",\n    \"photo\": \"ullam\",\n    \"country_id\": 7,\n    \"division_id\": 15\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": "http:\/\/localhost\/api\/team\/{team}",
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
@@ -74,7 +235,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"deserunt\",\n    \"birth_date\": \"quas\",\n    \"photo\": \"qui\",\n    \"team_id\": 10,\n    \"country_id\": 19,\n    \"position_id\": 6\n}"
+                            "raw": "{\n    \"name\": \"fugiat\",\n    \"birth_date\": \"ratione\",\n    \"photo\": \"amet\",\n    \"team_id\": 6,\n    \"country_id\": 9,\n    \"position_id\": 2\n}"
                         },
                         "description": "",
                         "response": []
@@ -143,7 +304,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"rerum\",\n    \"birth_date\": \"vel\",\n    \"photo\": \"eligendi\",\n    \"team_id\": 10,\n    \"country_id\": 17,\n    \"position_id\": 6\n}"
+                            "raw": "{\n    \"name\": \"dolorem\",\n    \"birth_date\": \"aspernatur\",\n    \"photo\": \"reiciendis\",\n    \"team_id\": 15,\n    \"country_id\": 9,\n    \"position_id\": 2\n}"
                         },
                         "description": "",
                         "response": []
@@ -235,7 +396,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sequi\",\n    \"birth_date\": \"ipsam\",\n    \"photo\": \"labore\",\n    \"team_id\": 10,\n    \"country_id\": 2\n}"
+                            "raw": "{\n    \"name\": \"deserunt\",\n    \"birth_date\": \"voluptates\",\n    \"photo\": \"vel\",\n    \"team_id\": 14,\n    \"country_id\": 4\n}"
                         },
                         "description": "",
                         "response": []
@@ -304,7 +465,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"voluptatem\",\n    \"birth_date\": \"ipsum\",\n    \"photo\": \"dolore\",\n    \"team_id\": 8,\n    \"country_id\": 5\n}"
+                            "raw": "{\n    \"name\": \"repudiandae\",\n    \"birth_date\": \"laboriosam\",\n    \"photo\": \"expedita\",\n    \"team_id\": 9,\n    \"country_id\": 16\n}"
                         },
                         "description": "",
                         "response": []
@@ -396,7 +557,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"aliquam\",\n    \"birth_date\": \"repudiandae\",\n    \"photo\": \"laudantium\",\n    \"team_id\": 4,\n    \"country_id\": 11\n}"
+                            "raw": "{\n    \"name\": \"voluptatem\",\n    \"birth_date\": \"tempora\",\n    \"photo\": \"cum\",\n    \"team_id\": 10,\n    \"country_id\": 8\n}"
                         },
                         "description": "",
                         "response": []
@@ -419,7 +580,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"repellendus\",\n    \"birth_date\": \"fugit\",\n    \"photo\": \"quasi\",\n    \"team_id\": 3,\n    \"country_id\": 5\n}"
+                            "raw": "{\n    \"name\": \"commodi\",\n    \"birth_date\": \"quo\",\n    \"photo\": \"recusandae\",\n    \"team_id\": 17,\n    \"country_id\": 6\n}"
                         },
                         "description": "",
                         "response": []
@@ -475,167 +636,6 @@
                     "name": "Remove the specified resource from storage.",
                     "request": {
                         "url": "http:\/\/localhost\/api\/leader\/{leader}",
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team",
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team\/create",
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team",
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"name\": \"omnis\",\n    \"year\": 3,\n    \"initials\": \"recusandae\",\n    \"photo\": \"magni\",\n    \"country_id\": 4,\n    \"division_id\": 12\n}"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team\/{team}",
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team\/{team}\/edit",
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team\/{team}",
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"name\": \"velit\",\n    \"year\": 8,\n    \"initials\": \"maiores\",\n    \"photo\": \"aut\",\n    \"country_id\": 19,\n    \"division_id\": 16\n}"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "http:\/\/localhost\/api\/team\/{team}",
                         "method": "DELETE",
                         "header": [
                             {
