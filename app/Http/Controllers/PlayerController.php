@@ -203,6 +203,7 @@ class PlayerController extends Controller
             'message' => 'Jogador apagado',
             'result' => 'ok'
         ];
-        return response($response, 200);
+        //return response($response, 200);
+        return redirect('/list_players');
     }
 }

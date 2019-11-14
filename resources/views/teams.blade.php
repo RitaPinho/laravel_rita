@@ -15,9 +15,6 @@
                             <div class="col-md-6 text-right">
                                 {{--<a href="edit_team/?id={{ $team->id }}"><button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-eye"></i></button></a>--}}
                                 <a href="edit_team/?id={{ $team->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
-                                <button type="submit" class="btn btn-danger btn-circle btn-sm">
-                                    <i class="fa fa-trash"></i>
-                                </button>
                             </div>
                         </div>
                     </div>

@@ -14,9 +14,13 @@
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <a href="edit_leader/?id={{ $leader->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
-                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
-                                        <i class="fa fa-trash"></i>
-                                    </button>
+                                    <form style="display: inline-block" method="post" action="{{ route('leader.destroy', $leader->id) }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -25,7 +29,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <p><b>Data de nascimento: </b>{{ $leader->birth_date  }}</p>
-                                    <p><b>Equipa: </b>{{ $leader->team->name  }}</p>
+                                    <p><b>Equipa: </b>
+                                        @if(@isset($leader->team->name))
+                                            {{ $leader->team->name  }}
+                                        @endif
+                                    </p>
                                     <p><b>País: </b>{{ $leader->country->country  }}</p>
                                 </div>
                                 <div class="col-md-6">

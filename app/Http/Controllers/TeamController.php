@@ -159,7 +159,7 @@ class TeamController extends Controller
             [
                 'name' => 'unique:teams,name|string|max:100',
                 'year' => 'integer|max:2019|min:1800',
-                'initials' => 'string|max:4',
+                'initials' => 'string|max:10',
                 'photo' => 'image',
                 'country_id' => 'integer|exists:countries,id',
                 'division_id' => 'integer|exists:divisions,id'

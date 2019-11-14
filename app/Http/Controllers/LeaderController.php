@@ -196,6 +196,7 @@ class LeaderController extends Controller
             'message' => 'Dirigente apagado',
             'result' => 'ok'
         ];
-        return response($response, 200);
+        //return response($response, 200);
+        return redirect('/list_leaders');
     }
 }

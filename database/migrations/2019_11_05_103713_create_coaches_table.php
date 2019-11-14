@@ -19,7 +19,7 @@ class CreateCoachesTable extends Migration
             $table->string('name');
             $table->date('birth_date');
             $table->string('photo')->nullable();
-            $table->bigInteger('team_id')->unsigned();
+            $table->bigInteger('team_id')->unsigned()->nullable();
             $table->bigInteger('country_id')->unsigned();
             $table->softDeletes();
         });

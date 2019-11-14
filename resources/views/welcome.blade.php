@@ -81,18 +81,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Taça UA Futsal
+                    Taça UA
+                    <img width="100" src="/uploads/images/taça_ua.png">
                 </div>
 
                 <div class="links">
-                    <a href="/list_teams">Equipas</a>
-                    <a href="/list_players">Jogadores</a>
-                    <a href="/list_leaders">Dirigentes</a>
-                    <a href="/list_coaches">Treinadores</a><br><br><br><br>
-                    <a href="/insert_teams">Inserir Equipas</a>
-                    <a href="/insert_players">Inserir Jogadores</a>
-                    <a href="/insert_leaders">Inserir Dirigentes</a>
-                    <a href="/insert_coaches">Inserir Treinadores</a>
+                    
+                    <a style="color: orange" href="/list_teams">Equipas</a>
+                    <a style="color: orange" href="/list_players">Jogadores</a>
+                    <a style="color: orange" href="/list_leaders">Dirigentes</a>
+                    <a style="color: orange" href="/list_coaches">Treinadores</a>
+                    {{--@if(Auth::check())--}}
+                        <br><br><br>
+                        <a style="color: orange" href="/insert_teams">Inserir Equipas</a>
+                        <a style="color: orange" href="/insert_players">Inserir Jogadores</a>
+                        <a style="color: orange" href="/insert_leaders">Inserir Dirigentes</a>
+                        <a style="color: orange" href="/insert_coaches">Inserir Treinadores</a>
+                    {{--@endif--}}
                 </div>
             </div>
         </div>

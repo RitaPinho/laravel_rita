@@ -21,6 +21,7 @@
                             @csrf
                                 @method('put')
                             <input type="hidden" name="_method" value="put">
+                            <input type="hidden" name="id" value="{{ $team->id }}">
                                 <div class="form-group row">
                                     <label for="nada" class="col-md-4 col-form-label text-md-right"></label>
 
@@ -72,7 +73,7 @@
                                     <label for="photo" class="col-md-4 col-form-label text-md-right">{{ __('Símbolo') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="photo" type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="" required autocomplete="photo">
+                                        <input id="photo" type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="" autocomplete="photo">
 
                                         @error('photo')
                                         <span class="invalid-feedback" role="alert">
@@ -134,16 +135,18 @@
         </div>
             <div class="card shadow mb-4">
                 <div class="card-body">
-                    Jogadores:
+
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
+                        Jogadores:
+                        <a href="/insert_players"><button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-plus"></i></button></a>
+                        <table class="mt-2 table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
                             <thead>
                             <tr>
                                 <th>Nome</th>
                                 <th>Data-nascimento</th>
                                 <th>País</th>
                                 <th>Posição</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -152,7 +155,7 @@
                                 <th>Data-nascimento</th>
                                 <th>País</th>
                                 <th>Posição</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -163,14 +166,12 @@
                                     <td>{{ $player->country->country }}</td>
                                     <td>{{ $player->position->position }}</td>
                                     <td>
-                                        <a href="">
-                                            <button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-eye"></i></button>
-                                        </a>
-                                        <a href="edit_player/?id={{ $team->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
+                                        <a href="edit_player/?id={{ $player->id }}"><button class="btn btn-success btn-circle btn-sm"><i class="fa fa-edit"></i></button></a>
 
-                                        <form style="display: inline-block" method="post" action="">
+                                        <form style="display: inline-block" method="post" action="{{ route('null_player') }}">
                                             @csrf
-                                            @method('delete')
+                                            @method('put')
+                                            <input type="hidden" name="id" value="{{ $player->id }}">
                                             <button type="submit" class="btn btn-danger btn-circle btn-sm">
                                                 <i class="fa fa-trash"></i>
                                             </button>
@@ -183,15 +184,16 @@
                             </tbody>
                         </table>
                     </div>
-                    Dirigentes:
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
+                        Dirigentes:
+                        <a href="/insert_leaders"><button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-plus"></i></button></a>
+                        <table class="mt-2 table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
                             <thead>
                             <tr>
                                 <th>Nome</th>
                                 <th>Data-nascimento</th>
                                 <th>País</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -199,7 +201,7 @@
                                 <th>Nome</th>
                                 <th>Data-nascimento</th>
                                 <th>País</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -209,20 +211,16 @@
                                     <td>{{ $leader->birth_date }}</td>
                                     <td>{{ $leader->country->country }}</td>
                                     <td>
-                                        <a href="">
-                                            <button class="btn btn-primary btn-circle btn-sm">
-                                                <i class="fa fa-eye"></i>
-                                            </button>
-                                        </a>
                                         <a href="edit_leader/?id={{ $leader->id }}">
                                             <button class="btn btn-success btn-circle btn-sm">
                                                 <i class="fa fa-edit"></i>
                                             </button>
                                         </a>
 
-                                        <form style="display: inline-block" method="post" action="">
+                                        <form style="display: inline-block" method="post" action="{{ route('null_leader') }}">
                                             @csrf
-                                            @method('delete')
+                                            @method('put')
+                                            <input type="hidden" name="id" value="{{ $leader->id }}">
                                             <button type="submit" class="btn btn-danger btn-circle btn-sm">
                                                 <i class="fa fa-trash"></i>
                                             </button>
@@ -235,15 +233,16 @@
                             </tbody>
                         </table>
                     </div>
-                    Treinador:
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
+                        Treinador:
+                        <a href="/insert_coaches"><button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-plus"></i></button></a>
+                        <table class="mt-2 table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length="25">
                             <thead>
                             <tr>
                                 <th>Nome</th>
                                 <th>Data-nascimento</th>
                                 <th>País</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -251,7 +250,7 @@
                                 <th>Nome</th>
                                 <th>Data-nascimento</th>
                                 <th>País</th>
-                                <th>Actions</th>
+                                <th>Ações</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -261,18 +260,16 @@
                                     <td>{{ $coach->birth_date }}</td>
                                     <td>{{ $coach->country->country }}</td>
                                     <td>
-                                        <a href="">
-                                            <button class="btn btn-primary btn-circle btn-sm"><i class="fa fa-eye"></i></button>
-                                        </a>
                                         <a href="edit_coach/?id={{ $coach->id }}">
                                             <button class="btn btn-success btn-circle btn-sm">
                                                 <i class="fa fa-edit"></i>
                                             </button>
                                         </a>
 
-                                        <form style="display: inline-block" method="post" action="">
+                                        <form style="display: inline-block" method="post" action="{{ route('null_coach') }}">
                                             @csrf
-                                            @method('delete')
+                                            @method('put')
+                                            <input type="hidden" name="id" value="{{ $coach->id }}">
                                             <button type="submit" class="btn btn-danger btn-circle btn-sm">
                                                 <i class="fa fa-trash"></i>
                                             </button>

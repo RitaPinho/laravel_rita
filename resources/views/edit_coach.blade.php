@@ -20,6 +20,7 @@
                             <form method="POST" action="{{ route('update_coach') }}" enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" name="_method" value="put">
+                                <input type="hidden" name="id" value="{{ $coach->id }}">
                                 <div class="form-group row">
                                     <label for="nada" class="col-md-4 col-form-label text-md-right"></label>
 
@@ -58,7 +59,7 @@
                                     <label for="photo" class="col-md-4 col-form-label text-md-right">{{ __('Fotografia') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="photo" type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="" required autocomplete="photo">
+                                        <input id="photo" type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="" autocomplete="photo">
 
                                         @error('photo')
                                         <span class="invalid-feedback" role="alert">
@@ -71,8 +72,13 @@
                                     <label for="team_id" class="col-md-4 col-form-label text-md-right">{{ __('Equipa') }}</label>
 
                                     <div class="col-md-6">
-                                        <select name="team_id" class="form-control">
-                                            <option value="{{ $coach->team_id }}">{{ $coach->team->name }}</option>
+                                        <select name="team_id" class="form-control @error('team_id') is-invalid @enderror">
+                                            @if(@isset($coach->team->name))
+
+                                                <option value="{{ $coach->team_id }}">{{ $coach->team->name }}</option>
+                                            @else
+                                                <option value="vazio">Selecione uma equipa</option>
+                                            @endif
                                             @foreach($teams as $team)
                                                 <option value="{{ $team->id  }}">{{ $team->name  }}</option>
                                             @endforeach
@@ -90,7 +96,7 @@
                                     <label for="country_id" class="col-md-4 col-form-label text-md-right">{{ __('País') }}</label>
 
                                     <div class="col-md-6">
-                                        <select name="country_id" class="form-control">
+                                        <select name="country_id" class="form-control @error('country_id') is-invalid @enderror">
                                             <option value="{{ $coach->country_id }}">{{ $coach->country->country }}</option>
                                             @foreach($countries as $country)
                                                 <option value="{{ $country->id  }}">{{ $country->country }}</option>

@@ -4,11 +4,11 @@
 
     <div class="row">
         <div class="col-md-8">
-            <h1 class="h3 mb-2 text-gray-800">Users</h1>
+            <h1 class="h3 mb-2 text-gray-800">Utilizadores</h1>
         </div>
         <div class="col-md-4 text-right">
             <a href="{{ route('user.create') }}">
-                <button class="btn btn-primary">Add new</button>
+                <button class="btn btn-primary">Adicionar</button>
             </a>
         </div>
     </div>

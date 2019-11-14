@@ -199,6 +199,7 @@ class CoachController extends Controller
             'message' => 'Treinador apagado',
             'result' => 'ok'
         ];
-        return response($response, 200);
+        //return response($response, 200);
+        return redirect('/list_coaches');
     }
 }

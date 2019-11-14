@@ -28,7 +28,7 @@ class TeamStoreRequest extends FormRequest
         return [
             'name' => 'unique:teams,name|required|string|max:100',
             'year' => 'required|integer|max:2019|min:1800',
-            'initials' => 'required|string|max:4',
+            'initials' => 'required|string|max:10',
             'photo' => 'required|image',
             'country_id' => 'required|integer|exists:countries,id',
             'division_id' => 'required|integer|exists:divisions,id'

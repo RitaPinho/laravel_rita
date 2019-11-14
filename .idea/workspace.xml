@@ -2,24 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ed9ad9-a455-4603-b6b8-e9fa934d866d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_coach.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_leader.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_player.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_team.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/boilerplate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boilerplate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeaderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeaderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PlayerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlayerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TeamStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TeamStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_05_103557_create_players_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_103557_create_players_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_05_103713_create_coaches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_103713_create_coaches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_05_103757_create_leaders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_05_103757_create_leaders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CoachesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CoachesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/LeadersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/LeadersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PlayersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PlayersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TeamsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TeamsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bo.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bo/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bo/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bo/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bo/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/coaches.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/coaches.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit_coach.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit_coach.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit_leader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit_leader.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit_player.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit_player.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit_team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit_team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/bo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/bo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/leaders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/leaders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/players.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/players.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/teams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +66,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="laravel-base" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,13 +174,28 @@
       <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
       <path value="$PROJECT_DIR$/vendor/windwalker/renderer" />
       <path value="$PROJECT_DIR$/vendor/windwalker/structure" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TC28PWygrYCIvKUNjv6QuXIbwQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-base-aula" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -153,11 +205,11 @@
       <recent name="C:\xampp\htdocs\laravel-base\database\migrations" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel-base\storage\app\images" />
       <recent name="C:\xampp\htdocs\laravel-base\database\migrations" />
       <recent name="C:\xampp\htdocs\laravel-base" />
       <recent name="$PROJECT_DIR$/resources/views/bo/partials" />
       <recent name="$PROJECT_DIR$/resources/views/bo/users" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,7 +246,14 @@
       <workItem from="1573230632723" duration="2218000" />
       <workItem from="1573466305710" duration="11491000" />
       <workItem from="1573511729123" duration="4769000" />
-      <workItem from="1573553650886" duration="11003000" />
+      <workItem from="1573553650886" duration="18576000" />
+      <workItem from="1573605372942" duration="275000" />
+      <workItem from="1573607161548" duration="2530000" />
+      <workItem from="1573641253930" duration="8718000" />
+      <workItem from="1573688594000" duration="4729000" />
+      <workItem from="1573736990212" duration="5097000" />
+      <workItem from="1573750820622" duration="8154000" />
+      <workItem from="1573762595811" duration="3687000" />
     </task>
     <servers />
   </component>

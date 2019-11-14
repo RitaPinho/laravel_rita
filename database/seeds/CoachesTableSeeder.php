@@ -13,27 +13,27 @@ class CoachesTableSeeder extends Seeder
     {
         //
         \App\Coach::create([
-            'name' => 'José Gomes',
-            'birth_date' => '1958-09-12',
-            'team_id' => '4',
+            'name' => 'Diogo Carvalho',
+            'birth_date' => '1997-09-12',
+            'team_id' => '35',
             'country_id' => '15'
         ]);
         \App\Coach::create([
             'name' => 'Mário Rui',
             'birth_date' => '1978-09-12',
-            'team_id' => '3',
+            'team_id' => '7',
             'country_id' => '4'
         ]);
         \App\Coach::create([
-            'name' => 'Pepa',
+            'name' => 'Jorge Lopes',
             'birth_date' => '1980-12-14',
-            'team_id' => '2',
+            'team_id' => '14',
             'country_id' => '33'
         ]);
         \App\Coach::create([
-            'name' => 'Bruno Lage',
+            'name' => 'Rute Borges',
             'birth_date' => '1976-05-12',
-            'team_id' => '1',
+            'team_id' => '19',
             'country_id' => '33'
         ]);
 
